@@ -2,6 +2,18 @@
 
 Power distribution board (PDB) project files for the SwimBladder project.
 
+> [!WARNING]
+> This board is an unvalidated, untested work in progress (WIP).
+> It has not completed electrical, thermal, or in-water system validation.
+> Do not treat this design as production-ready hardware.
+
+## Project Status
+
+- Current state: WIP (design in progress)
+- Validation status: not electrically validated
+- Test status: not thermally validated, not full-load validated, not field-tested
+- Use at your own risk until formal verification is completed
+
 ## Repository Contents
 
 - `KiCad Project Files/` - KiCad project, PCB, and schematic sources.
@@ -12,6 +24,7 @@ Power distribution board (PDB) project files for the SwimBladder project.
 ## Project Overview
 
 This board is designed as a compact 8-thruster central star-node PDB for Blue Robotics T200 systems with 4S battery input.
+It is currently in a pre-validation state and should be treated as a reference design draft.
 
 - System topology: battery -> cable-side main fuse -> optional e-stop/contactor -> dual XT90 input -> central high-current node -> 8 fused ESC branches -> XT60 outputs
 - Nominal battery voltage: 14.8 V (4S), full charge: 16.8 V
