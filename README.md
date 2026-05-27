@@ -56,13 +56,13 @@ For complete assumptions, formulas, BOM guidance, and test plan, see `Swim_Bladd
 ## Screenshots
 
 ### Schematic
-<img src="Screenshots/Schematic.jpg" alt="Schematic view" width="760" />
+<img src="Screenshots/Schematic.png" alt="Schematic view" width="760" />
 
 ### PCB Layout
-<img src="Screenshots/PCB Editor View.jpg" alt="PCB editor view" width="760" />
+<img src="Screenshots/PCB Editor View.png" alt="PCB editor view" width="760" />
 
 ### 3D Board View
-<img src="Screenshots/3D View.jpg" alt="3D board view" width="760" />
+<img src="Screenshots/3D View.png" alt="3D board view" width="760" />
 
 ## Getting Started
 
