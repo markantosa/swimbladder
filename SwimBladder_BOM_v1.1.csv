@@ -1,0 +1,16 @@
+Designators,Value,Footprint,Qty per board,Order Qty (2 boards + margin/MOQ),Package/Type,Source
+"J1, J19",AMASS XT90PW-M.G.Y,Connector_AMASS:AMASS_XT90PW-M_1x02_P10.90mm_Horizontal,2,4,THT panel connector,LCSC C3040689
+"J3, J4, J5, J6, J7, J8, J9, J10",AMASS XT60PW-F,Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal,8,16,THT panel connector,LCSC C428722
+"J11, J12, J13, J14, J15, J16, J17, J18",Molex 436500201 (Micro-Fit 3.0 43650-0200),Connector_Molex:Molex_Micro-Fit_3.0_43650-0200_1x02_P3.00mm_Horizontal,8,16,THT 2-pin header,LCSC C587649
+J2,IDC Header 2x08,Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical,1,0,THT 16-pin IDC,ALREADY OWNED - not ordering
+D1,SMDJ22A TVS diode (5.0SMDJ22A/TR13 - Brightking),Diode_SMD:D_SMC,1,2,SMC,LCSC C522679
+D2,Status LED,LED_SMD:LED_0805_2012Metric,1,0,0805,ALREADY OWNED - not ordering
+"C_MAIN1, C_MAIN2",4700uF 25V (EWH1EM472L25OT - AISHI),Capacitor_THT:CP_Radial_D16.0mm_P7.50mm,2,5,Radial THT,"LCSC C2843670 (Min:5 Mult:5, rounded up from 4)"
+"C_ESC1, C_ESC2, C_ESC3, C_ESC4, C_ESC5, C_ESC6, C_ESC7, C_ESC8",1000uF 35V (35YXJ1000M12.5X20 - Rubycon),Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,8,20,Radial THT,"LCSC C88743 (Min:5 Mult:5, rounded up from 16)"
+"C_HF1, C_HF2, C_HF3, C_HF4, C_HF5, C_HF6, C_HF7, C_HF8",1uF 25V X7R (CL10B105KA8NNNC - Samsung),Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,8,20,0603,"LCSC C29936 (Min:10 Mult:10)"
+"F_ESC1, F_ESC2, F_ESC3, F_ESC4, F_ESC5, F_ESC6, F_ESC7, F_ESC8 (holder)",Keystone 3568 mini blade fuseholder,Fuse:Fuseholder_Blade_Mini_Keystone_3568,8,16,THT fuseholder,"NOT ORDERED - LCSC C5249699 out of stock; source from Digi-Key/Mouser instead"
+"F_ESC1-8 (fuse element)",30A mini blade fuse,N/A - not soldered; plugs into holder,8,16,Loose automotive part,Non-LCSC (auto parts/RC supplier)
+R_BLEED1,22k Ohm (RC0603FR-0722KL - Yageo),Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,0,0603,"NOT ORDERED - LCSC C114065 requires Min:100/Mult:100; ask around for spares instead"
+R_LED1,10k Ohm (RC0603FR-0710KL - Yageo),Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,1,0,0603,"NOT ORDERED - LED already owned, and LCSC C98220 requires Min:100/Mult:100"
+"R_PWM1, R_PWM2, R_PWM3, R_PWM4, R_PWM5, R_PWM6, R_PWM7, R_PWM8",100 Ohm,Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,8,0,0402,ALREADY OWNED (sample book) - not ordering
+"R_PD1, R_PD2, R_PD3, R_PD4, R_PD5, R_PD6, R_PD7, R_PD8",10k Ohm (RC0603FR-0710KL - Yageo),Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,8,0,0603,"NOT ORDERED - LCSC C98220 requires Min:100/Mult:100; ask around for spares instead"

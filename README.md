@@ -49,10 +49,8 @@ as a reference design draft.
 - Bulk capacitance at the node: `C_MAIN1`, `C_MAIN2` = 4700 uF each.
 - Input TVS: `D1` (`D_TVS`), 22-24 V standoff class for 4S. Recommended part: SMDJ22A
   (unidirectional, 3 kW, DO-214AB / SMC footprint, `Diode_SMD:D_SMC` or `D_SMC_HandSolder`).
-  See "Known issues" - placement needs correction in the current layout.
-- Rail bleed / discharge: `R_BLEED1` = 100 Ohm. **Placeholder value, not final** - 100 Ohm
-  draws ~168 mA / ~2.8 W continuously at full charge. A true bleed resistor should be in the
-  tens of kOhm (e.g. 22k-47k); confirm the intent before fabrication.
+- Rail bleed / discharge: `R_BLEED1` = 22 kOhm. Draws ~0.76 mA / ~13 mW continuously at full
+  charge - trivial dissipation for a 0603, well within its power/voltage rating.
 - Power/status LED: `D2` (`LED`) with series resistor `R_LED1` = 10 kOhm.
 
 ### Per-ESC branch (x8)
@@ -100,17 +98,8 @@ as a reference design draft.
 
 ## Known Issues / TODO (V1.1)
 
-- **TVS placement:** `D1` currently sits at the bottom of the board next to the PWM header
-  (`J2`), far from the battery input. It must move to the top-center input node, on the load
-  side of the fuse/contactor, hard against the XT90 +VBAT pads and straddling the +VBAT and
-  GND pours with local ground via stitching. Consider a second parallel SMDJ22A footprint at
-  the same node if hot-disconnect under load is possible.
-- **`R_BLEED1` value:** 100 Ohm is a placeholder - see Schematic Summary.
-- **Input HF cap grouping:** keep any input high-frequency cap clustered at the XT90 pads with
-  `C_MAIN1/2` and the TVS, not offset to one side.
-- **`R_BLEED1` thermal:** relocate away from electrolytic bodies and the PWM header.
-- **Indicator LEDs:** only `D2` is placed; the engineering notes call for more indicators.
-- **Screenshots:** V1.1 captures added; regenerate again after the TVS relocation.
+- No outstanding items. TVS placement, input HF cap grouping, indicator LEDs, and the
+  `R_BLEED1` value (now 22 kOhm) have all been resolved.
 
 ## Quick Calculation Snapshot
 
@@ -160,6 +149,27 @@ For complete assumptions, formulas, BOM guidance, and test plan, see `Swim_Bladd
 
 ### V1.0
 - Initial 8-branch central star-node PDB layout.
+
+## Procurement (2-board build)
+
+Bare PCB via JLCPCB; most components via LCSC (`SwimBladder_LCSC_BatchBOM_v1.1.csv`); full
+reference BOM in `SwimBladder_BOM_v1.1.csv`. JLCPCB and LCSC ship separately even though they're
+sister companies - no combined-box option outside of paying for JLC's PCBA assembly service.
+
+### Still need to source separately (not in the LCSC batch order)
+- [ ] `R_BLEED1`, 22k Ohm, 0603 (LCSC C114065) - MOQ is Min:100/Mult:100, not worth it for ~3
+  pieces; ask around for spares or buy loose.
+- [ ] `R_LED1` + `R_PD1..R_PD8`, 10k Ohm, 0603 (LCSC C98220) - same MOQ issue, ~23 pieces needed.
+- [ ] 30 A mini blade fuse elements (x16) for `F_ESC1..F_ESC8` - these plug into the Keystone 3568
+  holder (which is in the LCSC order) but the fuse element itself isn't an LCSC/electronics-
+  distributor item; source from an automotive parts store or RC supplier.
+- [ ] `F_ESC1..F_ESC8` fuseholders, Keystone 3568 (x8) - LCSC C5249699 was out of stock, dropped
+  from the batch order; source from Digi-Key/Mouser instead.
+
+### Already owned, not in the order
+- `D2` status LED
+- `J2` IDC 2x08 header
+- `R_PWM1..R_PWM8`, 100 Ohm, 0402 (from sample book)
 
 ## License
 
