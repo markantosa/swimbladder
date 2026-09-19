@@ -1,5 +1,7 @@
 # SwimBladder
 
+<img src="Screenshots/1789821924535.jpg" alt="Assembled SwimBladder PDB" width="760" />
+
 Power distribution board (PDB) project files for the SwimBladder project.
 
 Silkscreen tag: `SOAR UWU | 8 x T200 | V1.1`
@@ -114,14 +116,13 @@ For complete assumptions, formulas, BOM guidance, and test plan, see `Swim_Bladd
 
 ## Screenshots (V1.1)
 
-### Routing
-<img src="Screenshots/v1.1%20routing.png" alt="V1.1 routing" width="760" />
+| Assembled Board (1) | Assembled Board (2) |
+|---|---|
+| <img src="Screenshots/1789821924535.jpg" alt="Assembled SwimBladder PDB, angle 1" width="380" /> | <img src="Screenshots/1789821929153.jpg" alt="Assembled SwimBladder PDB, angle 2" width="380" /> |
 
-### 3D Render - Top
-<img src="Screenshots/v1.1%20render%20top%20view.png" alt="V1.1 render, top view" width="760" />
-
-### 3D Render - Isometric
-<img src="Screenshots/v1.1%20render%20isometric%20view.png" alt="V1.1 render, isometric view" width="760" />
+| Routing | 3D Render - Top | 3D Render - Isometric |
+|---|---|---|
+| <img src="Screenshots/v1.1%20routing.png" alt="V1.1 routing" width="240" /> | <img src="Screenshots/v1.1%20render%20top%20view.png" alt="V1.1 render, top view" width="240" /> | <img src="Screenshots/v1.1%20render%20isometric%20view.png" alt="V1.1 render, isometric view" width="240" /> |
 
 <sub>Earlier V1.0 captures (`Schematic.png`, `PCB Editor View.png`, `3D View.png`) remain in `Screenshots/` for reference.</sub>
 
