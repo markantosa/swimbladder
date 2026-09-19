@@ -114,9 +114,6 @@ For complete assumptions, formulas, BOM guidance, and test plan, see `Swim_Bladd
 
 ## Screenshots (V1.1)
 
-### Schematic
-<img src="Screenshots/v1.1%20schematic.png" alt="V1.1 schematic" width="760" />
-
 ### Routing
 <img src="Screenshots/v1.1%20routing.png" alt="V1.1 routing" width="760" />
 
